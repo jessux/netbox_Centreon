@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import CentreonObjects
+from .models import CentreonObject
 
-@admin.register(CentreonObjects) 
+@admin.register(CentreonObject)
 class centreon(admin.ModelAdmin):
     list_display = ('name', 'imported', 'state')
