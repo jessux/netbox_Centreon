@@ -1,6 +1,6 @@
 from django.db import models
 
-class CentreonObjectStatus(ipam):
+class CentreonObjectStatus(models.Model):
     ip = models.CharField(max_length=16)
     imported = models.BooleanField(default=False)
     state= models.BooleanField(default=False)
