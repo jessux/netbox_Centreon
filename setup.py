@@ -1,3 +1,4 @@
+import requests
 from setuptools import find_packages, setup
 
 setup(
@@ -8,6 +9,6 @@ setup(
     author='Gabriel KAHLOUCHE',
     license='Apache 2.0',
     install_requires=[],
-    packages=find_packages(),
+    packages=find_packages(requests),
     include_package_data=True,
 )
