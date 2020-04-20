@@ -26,9 +26,11 @@ class CentreonObjectStatus(models.Model):
         else:
             return ""
 
-    def __init__(self,ip):
+
+## utiliser Animal.objects pour parcourir les objets instanciés
+## Faire un xmind pour mieux comprendre
+    def set(self,ip):
         hosts=self.getHosts()
-        self.name=ip
         for r in hosts["result"]:
             if ip == r["address"]:
                 self.imported = True
