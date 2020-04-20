@@ -5,10 +5,11 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
     model = 'ipam.ipaddress'
 
     def right_page(self):
-        super()
+        a=super()
         c = CentreonObjectStatus()
         return self.render('netbox_Centreon/status.html', extra_context={
-            'c': c
+            'c': c,
+            'a': a
         })
 
 template_extensions = [SiteCentreonObjectStatus]
