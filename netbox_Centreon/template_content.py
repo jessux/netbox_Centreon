@@ -9,7 +9,6 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
             'imported': CentreonObjectStatus.imported,
             'state' : CentreonObjectStatus.state,
             'name' : CentreonObjectStatus.name,
-            'object' : object.split('/')[0]
         })
 
 template_extensions = [SiteCentreonObjectStatus]
