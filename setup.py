@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='netbox-Centreon',
+    name='netboxCentreon',
     version='0.1',
     description='A NetBox plugin for Centron',
     url='https://github.com/jessux/netbox-Centreon',
