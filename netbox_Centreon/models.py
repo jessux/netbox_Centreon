@@ -7,3 +7,9 @@ class CentreonObjectStatus(models.Model):
 
     def __str__(self):
         return self.name
+
+    def isimported(self):
+        return self.imported
+
+    def isactivated(self):
+        return self.state
