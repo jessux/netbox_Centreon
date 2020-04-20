@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import netboxCentreon
+from .models import CentreonObjects
 
-@admin.register(netboxCentreon)
+@admin.register(CentreonObjects)
 class centreon(admin.ModelAdmin):
     list_display = ('name', 'imported', 'state')
