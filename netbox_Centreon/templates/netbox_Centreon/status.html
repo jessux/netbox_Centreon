@@ -6,7 +6,7 @@
     
     
         <div class="panel-body text-muted">
-            {%ip = object%}
+            {%assign ip object%}
             {%c.set(ip)%}
             Is imported ? : {{c.imported}}<br>
             Is activated ? : {{c.state}}<br>
