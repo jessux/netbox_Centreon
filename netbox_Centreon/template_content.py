@@ -8,7 +8,8 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         return self.render('netbox_Centreon/status.html', extra_context={
             'imported': CentreonObjectStatus.imported,
             'state' : CentreonObjectStatus.state,
-            'name' : CentreonObjectStatus.name
+            'name' : CentreonObjectStatus.name,
+            'object' : object.split('/')[0]
         })
 
 template_extensions = [SiteCentreonObjectStatus]
