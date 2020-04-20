@@ -26,7 +26,7 @@ class CentreonObjectStatus(models.Model):
         else:
             return ""
 
-    def __init__(self,ip):
+    def set(self,ip):
         hosts=self.getHosts()
         ip = ip.split("/")[0]
         for r in hosts["result"]:
