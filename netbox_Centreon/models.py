@@ -28,7 +28,6 @@ class CentreonObjectStatus(models.Model):
 
     def __init__(self,ip):
         hosts=self.getHosts()
-        ip = ip[0].split("/")[0]
         for r in hosts["result"]:
             if ip == r["address"]:
                 self.imported = True
