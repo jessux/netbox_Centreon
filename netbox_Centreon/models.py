@@ -6,4 +6,4 @@ class CentreonObject(models.Model):
     state= models.BooleanField
 
     def __str__(self):
-        return [self.name,self.imported,self.state]
+        return self.name
