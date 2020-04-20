@@ -7,7 +7,7 @@ setup(
     url='https://github.com/jessux/netbox-Centreon',
     author='Gabriel KAHLOUCHE',
     license='Apache 2.0',
-    install_requires=[requests],
+    install_requires=["requests"],
     packages=find_packages(),
     include_package_data=True,
 )
