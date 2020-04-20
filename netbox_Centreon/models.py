@@ -42,8 +42,3 @@ class CentreonObjectStatus(models.Model):
 
     def isactivated(self):
         return self.state
-
-
-c= CentreonObjectStatus("127.0.0.1")
-print c.isimported()
-print c.isactivated()
