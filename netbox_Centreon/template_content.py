@@ -8,7 +8,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         c = CentreonObjectStatus()
         obj = str(self.context['object']).split("/")[0] if '/' in str(self.context['object']) else str(self.context['object'])
         for i in CentreonObjectStatus.objects.all():
-            if str(self.context['object']) == i.name:
+            if obj == i.name:
                 c=i
         return self.render('netbox_Centreon/status.html', extra_context={
             'c': c,
