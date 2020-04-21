@@ -5,7 +5,7 @@ from .models import CentreonObjectStatus
 class CentreonObjectStatusView(View):
 
     def get(self, request):
-        CentreonObject = CentreonObjectStatus.objects.all()
+        CentreonObjects = CentreonObjectStatus.objects.all()
         return render(request, 'netbox_Centreon/CentreonObjectStatus.html', {
             'CentreonObjects': CentreonObjects,
         })
