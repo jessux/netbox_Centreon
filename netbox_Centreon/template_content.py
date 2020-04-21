@@ -6,6 +6,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
     def right_page(self):
         c = CentreonObjectStatus()
+        obj = str(self.context['object']).split("/")[0] if '/' in str(self.context['object']) else str(self.context['object'])
         for i in CentreonObjectStatus.objects.all():
             if str(self.context['object']) == i.name:
                 c=i
