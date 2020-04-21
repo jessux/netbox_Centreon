@@ -4,9 +4,9 @@
 {% with config=settings.PLUGINS_CONFIG.netbox_Centreon %}
 <h2 class="text-center" style="margin-top: 200px">
     {% for i in CentreonObjects %}
-        {{ CentreonObject.name }}
-        {{ CentreonObject.imported }}
-        {{CentreonObject.state}}
+        {{ i.name }}
+        {{ i.imported }}
+        {{ i.state }}
     <br>
     {% else %}
         No Centreon Objects have been created yet!
