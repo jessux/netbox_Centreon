@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% with config=settings.PLUGINS_CONFIG.netbox_animal_sounds %}
+{% with config=settings.PLUGINS_CONFIG.netbox_Centreon %}
 <h2 class="text-center" style="margin-top: 200px">
     {% if CentreonObject %}
         {{ CentreonObject.name|lower }}
