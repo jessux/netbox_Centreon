@@ -3,14 +3,16 @@
 {% block content %}
 {% with config=settings.PLUGINS_CONFIG.netbox_Centreon %}
 <h2 class="text-center" style="margin-top: 200px">
-    {% for i in CentreonObjects %}
-        {{ i.name }}
-        {{ i.imported }}
-        {{ i.state }}
-    <br>
+    {%if CentreonObjects|length > 0 %}
+        {% for i in CentreonObjects %}
+            {{ i.name }}
+            {{ i.imported }}
+            {{ i.state }}
+        <br>
     {% else %}
         No Centreon Objects have been created yet!
     {% endfor %}
+    {%endif%}
 </h2>
 {% endwith %}
 {% endblock %}
