@@ -8,9 +8,9 @@ class CentreonObjectStatus(models.Model):
 
     def getHosts(self):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
-        response = requests.request("POST", "http://192.168.1.201/centreon/api/index.php?action=authenticate", data=payload)
+        response = requests.request("POST", "http://"+centreon_url+"/centreon/api/index.php?action=authenticate", data=payload)
         if response.status_code == 200:
-            url = "http://192.168.1.201/centreon/api/index.php?action=action&object=centreon_clapi"
+            url = "http://"+centreon_url+"/centreon/api/index.php?action=action&object=centreon_clapi"
 
             payload = "{\r\n  \"action\": \"show\",\r\n  \"object\": \"host\"\r\n}"
             headers = {

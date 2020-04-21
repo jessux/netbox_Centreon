@@ -8,7 +8,9 @@ class CentreonConfig(PluginConfig):
     author = 'Gabriel KAHLOUCHE'
     author_email = 'gabriel.kahlouche@gmail.com'
     base_url = 'centreon'
-    required_settings = []
-    default_settings = {    }
+    required_settings = ["centreon_url"]
+    default_settings = {
+        'sync_type' : "async"
+    }
 
 config = CentreonConfig
