@@ -8,8 +8,11 @@
         <div class="panel-body text-muted">
             Is imported : {{c.imported}}<br>
             Is activated : {{c.state}}<br>
-            name {{c.name}}
-            a = {{a.object}}
+            {%for e in i%}
+            {%for l in e%}
+            l
+            {%enfor%}
+            {%endfor%}
         </div>
     
 </div>
