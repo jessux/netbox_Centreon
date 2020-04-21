@@ -31,8 +31,8 @@ class CentreonObjectStatus(models.Model):
 ## Faire un xmind pour mieux comprendre
     def setStatus(self,CentreonObject):
         hosts=self.getHosts()
-        print(hosts)
         for r in hosts["result"]:
+            print(str(CentreonObject.name),str(r["address"]),str(CentreonObject.name) == str(r["address"]))
             if str(CentreonObject.name) == str(r["address"]):
                 self.imported = True
                 self.state = True if str(r["activate"]) == '1' else False
