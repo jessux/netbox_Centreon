@@ -6,8 +6,8 @@
     
     
         <div class="panel-body text-muted">
-            Is imported : {{c.imported}}<br>
-            Is activated : {{c.state}}
+            {%if c.imported%}<span class="label label-success">Imported</span>{%else%}<span class="label label-danger">Not imported</span>{%endif%}<br>
+            {%if c.state%}<span class="label label-success">Activated</span>{%else%}<span class="label label-danger">Disabled</span>{%endif%}<br>
         </div>
     
 </div>
