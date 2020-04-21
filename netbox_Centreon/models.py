@@ -26,16 +26,6 @@ class CentreonObjectStatus(models.Model):
         else:
             return ""
 
-
-## utiliser Animal.objects pour parcourir les objets instanciés
-## Faire un xmind pour mieux comprendre
-    def setStatus(self,CentreonObject):
-        hosts=self.getHosts()
-        for r in hosts["result"]:
-            if str(CentreonObject.name) == str(r["address"]):
-                self.imported = True
-                self.state = True if str(r["activate"]) == '1' else False
-
     def __str__(self):
         return self.name
 

@@ -8,7 +8,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         c = CentreonObjectStatus()
         for i in CentreonObjectStatus.objects.all():
             if str(self.context['object']) == i.name:
-                c.setStatus(i)
+                c=i
         return self.render('netbox_Centreon/status.html', extra_context={
             'c': c,
         })
