@@ -6,7 +6,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
     def right_page(self):
         c = CentreonObjectStatus()
-        for i in CentreonObjectStatus.__dict__.iteritems():
+        for i in CentreonObjectStatus.__dict__.items():
             if c.name == i.name:
                 c.setStatus()
         return self.render('netbox_Centreon/status.html', extra_context={
