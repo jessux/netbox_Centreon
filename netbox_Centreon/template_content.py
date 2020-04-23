@@ -21,7 +21,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
             response = requests.request("POST", url, headers=headers, data=payload)
 
-            return response.json()
+            return response.text.encode("utf-8")
 
         else:
             return ""
