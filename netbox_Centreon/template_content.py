@@ -51,7 +51,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
     def buttons(self):
         print("test")
-        self.getAllHosts()
+        #self.getAllHosts()
 
     def right_page(self):
         c = CentreonObjectStatus()
