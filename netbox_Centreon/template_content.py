@@ -54,7 +54,7 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         return
 
     def buttons(self):
-        print(self.getAllHosts())
+        print(self.centreon_url)
         return {
             'url' : "https://www.google.fr"
         }
