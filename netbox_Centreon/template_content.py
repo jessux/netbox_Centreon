@@ -30,8 +30,6 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         else:
             return ""
 
-        print api_key
-
     def getHostsByName(self,name):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
         response = requests.request("POST", "http://"+self.centreon_url+"/centreon/api/index.php?action=authenticate", data=payload)
