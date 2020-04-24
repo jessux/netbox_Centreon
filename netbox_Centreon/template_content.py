@@ -1,14 +1,12 @@
-from django.conf import settings
 from extras.plugins import PluginTemplateExtension
 from .models import CentreonObjectStatus
 import requests
-from django.conf import *
-
+from __init__ import config
 
 
 class SiteCentreonObjectStatus(PluginTemplateExtension):
     model = 'ipam.ipaddress'
-    centreon_url = getattr(settings, 'centreon_url', None)
+    centreon_url = getattr(config, 'centreon_url', None)
 
     def getAllHosts(self):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
@@ -55,9 +53,8 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
     def buttons(self):
         print(self.centreon_url)
-        return {
-            'url' : "https://www.google.fr"
-        }
+        print(config.required_settings)
+        return '<a href="/api/plugins/centreon/CentreonObjectStatus/" class="btn"><span class="fa fa-plus" aria-hidden="true"></span> Refresh status</a>'
 
     def right_page(self):
         c = CentreonObjectStatus()
