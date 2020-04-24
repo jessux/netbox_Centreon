@@ -54,8 +54,9 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
     def buttons(self):
         print(self.centreon_url)
         print(config.required_settings)
-        return '<a href="/api/plugins/centreon/CentreonObjectStatus/" class="btn"><span class="fa fa-plus" aria-hidden="true"></span> Refresh status</a>'
-
+        #return '<a href="/api/plugins/centreon/CentreonObjectStatus/" class="btn"><span class="fa fa-plus" aria-hidden="true"></span> Refresh status</a>'
+        return "test"
+    
     def right_page(self):
         c = CentreonObjectStatus()
         obj = str(self.context['object']).split("/")[0] if '/' in str(self.context['object']) else str(self.context['object'])
