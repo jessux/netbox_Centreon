@@ -6,7 +6,7 @@ from __init__ import config
 
 class SiteCentreonObjectStatus(PluginTemplateExtension):
     model = 'ipam.ipaddress'
-    centreon_url = getattr(config, 'centreon_url', None)
+    centreon_url = getattr(config.required_settings, 'centreon_url', None)
 
     def getAllHosts(self):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
