@@ -1,16 +1,20 @@
+from django.conf import settings
 from extras.plugins import PluginTemplateExtension
 from .models import CentreonObjectStatus
 import requests
+from django.conf import *
+
 
 
 class SiteCentreonObjectStatus(PluginTemplateExtension):
     model = 'ipam.ipaddress'
+    centreon_url = getattr(settings, 'centreon_url', None)
 
     def getAllHosts(self):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
-        response = requests.request("POST", "http://192.168.1.201/centreon/api/index.php?action=authenticate", data=payload)
+        response = requests.request("POST", "http://"+self.centreon_url+"/centreon/api/index.php?action=authenticate", data=payload)
         if response.status_code == 200:
-            url = "http://192.168.1.201/centreon/api/index.php?action=action&object=centreon_clapi"
+            url = "http://"+self.centreon_url+"/centreon/api/index.php?action=action&object=centreon_clapi"
 
             payload = "{\r\n  \"action\": \"show\",\r\n  \"object\": \"host\"\r\n}"
             headers = {
@@ -26,11 +30,13 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
         else:
             return ""
 
+        print api_key
+
     def getHostsByName(self,name):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
-        response = requests.request("POST", "http://"+config.centreon_url+"/centreon/api/index.php?action=authenticate", data=payload)
+        response = requests.request("POST", "http://"+self.centreon_url+"/centreon/api/index.php?action=authenticate", data=payload)
         if response.status_code == 200:
-            url = "http://"+config.centreon_url+"/centreon/api/index.php?action=action&object=centreon_clapi"
+            url = "http://"+self.centreon_url+"/centreon/api/index.php?action=action&object=centreon_clapi"
 
             payload = "{\r\n  \"action\": \"show\",\r\n  \"object\": \"host\",\r\n  \"values\": \""+name+"\"\r\n}"
             headers = {
