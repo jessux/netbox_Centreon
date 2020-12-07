@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
-from netbox_animal_sounds.models import Animal
-from .serializers import AnimalSerializer
+from netbox_Centreon.models import CentreonObjectStatus
+from .serializers import CentreonSerializer
 
-class AnimalViewSet(ModelViewSet):
-    queryset = Animal.objects.all()
-    serializer_class = AnimalSerializer
+class CentreonViewSet(ModelViewSet):
+    queryset = CentreonObjectStatus.objects.all()
+    serializer_class = CentreonSerializer

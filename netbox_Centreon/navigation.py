@@ -3,8 +3,8 @@ from utilities.choices import ButtonColorChoices
 
 menu_items = (
     PluginMenuItem(
-        link='plugins:netbox_animal_sounds:random_animal',
-        link_text='Random sound',
+        link='plugins:netbox_Centreon:Centreon',
+        link_text='Centreon global',
         buttons=(
             PluginMenuButton('home', 'Button A', 'fa fa-info', ButtonColorChoices.BLUE),
             PluginMenuButton('home', 'Button B', 'fa fa-warning', ButtonColorChoices.GREEN),

@@ -1,16 +1,16 @@
 from extras.plugins import PluginConfig
 
-class AnimalSoundsConfig(PluginConfig):
+class CentreonSoundsConfig(PluginConfig):
     name = 'netbox_Centreon'
-    verbose_name = 'Animal Sounds'
+    verbose_name = 'Centreon'
     description = 'An example plugin for development purposes'
     version = '0.1'
-    author = 'Jeremy Stretch'
-    author_email = 'author@example.com'
-    base_url = 'animal-sounds'
+    author = 'Gabriel KAHLOUCHE'
+    author_email = 'gabriel.kahlouche@groupama.com'
+    base_url = 'Centreon'
     required_settings = []
     default_settings = {
-        'loud': False
+        'centreon_url': "digsflrp1k.dig.intra.groupama.fr"
     }
 
-config = AnimalSoundsConfig
+config = CentreonSoundsConfig

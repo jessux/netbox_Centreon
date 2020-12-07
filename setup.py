@@ -4,7 +4,7 @@ setup(
     name='netbox_Centreon',
     version='0.1',
     description='An example NetBox plugin',
-    url='https://github.com/netbox-community/netbox-animal-sounds',
+    url='https://github.com/netbox-community/netbox-Centreon-sounds',
     author='Jeremy Stretch',
     license='Apache 2.0',
     install_requires=[],

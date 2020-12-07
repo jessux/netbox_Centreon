@@ -1,12 +1,12 @@
 from extras.plugins import PluginTemplateExtension
-from .models import Animal
+from .models import CentreonObjectStatus
 
-class SiteAnimalCount(PluginTemplateExtension):
+class SiteCentreonCount(PluginTemplateExtension):
     model = 'dcim.site'
 
     def right_page(self):
-        return self.render('netbox_animal_sounds/inc/animal_count.html', extra_context={
-            'animal_count': Animal.objects.count(),
+        return self.render('netbox_Centreon/status.html', extra_context={
+            'CentreonObjectStatus': CentreonObjectStatus.objects.all(),
         })
 
-template_extensions = [SiteAnimalCount]
+template_extensions = [SiteCentreonCount]

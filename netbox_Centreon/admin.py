@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Animal
+from .models import Centreon
 
-@admin.register(Animal)
-class AnimalAdmin(admin.ModelAdmin):
-    list_display = ('name', 'sound')
+@admin.register(Centreon)
+class CentreonAdmin(admin.ModelAdmin):
+    list_display = ('name', 'imported','state')
