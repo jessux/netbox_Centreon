@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 from netbox_nagios.version import VERSION
 
 setup(
-    name="netbox-nagios",
+    name="netbox-Centreon",
     version=VERSION,
     author="Hudson River Trading LLC",
     author_email="opensource@hudson-trading.com",
