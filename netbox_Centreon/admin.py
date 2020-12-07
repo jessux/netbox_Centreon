@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Centreon
+from .models import CentreonObjectStatus
 
 @admin.register(Centreon)
 class CentreonAdmin(admin.ModelAdmin):
