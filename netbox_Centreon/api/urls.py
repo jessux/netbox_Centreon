@@ -1,6 +1,6 @@
 from rest_framework import routers
-from .views import CentreonObjectStatusViewSet
+from .views import AnimalViewSet
 
 router = routers.DefaultRouter()
-router.register('CentreonObjectStatus', CentreonObjectStatusViewSet)
+router.register('animals', AnimalViewSet)
 urlpatterns = router.urls

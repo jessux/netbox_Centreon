@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import CentreonObjectStatus
+from .models import Animal
 
-@admin.register(CentreonObjectStatus)
-class CentreonObjectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'imported', 'state')
+@admin.register(Animal)
+class AnimalAdmin(admin.ModelAdmin):
+    list_display = ('name', 'sound')

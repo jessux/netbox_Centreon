@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from netbox_Centreon.models import CentreonObjectStatus
+from netbox_animal_sounds.models import Animal
 
-class CentreonObjectStatusSerializer(ModelSerializer):
+class AnimalSerializer(ModelSerializer):
 
     class Meta:
-        model = CentreonObjectStatus
-        fields = ('id', 'name', 'imported','state')
+        model = Animal
+        fields = ('id', 'name', 'sound')

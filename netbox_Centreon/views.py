@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import View
-from .models import CentreonObjectStatus
+from .models import Animal
 
-class CentreonObjectStatusView(View):
-
+class RandomAnimalView(View):
+    """
+    Display a randomly-selected animal.
+    """
     def get(self, request):
-        CentreonObjects = CentreonObjectStatus.objects.all()
-        return render(request, 'netbox_Centreon/CentreonObjectStatus.html', {
-            'CentreonObjects': CentreonObjects,
+        animal = Animal.objects.order_by('?').first()
+        return render(request, 'netbox_animal_sounds/animal.html', {
+            'animal': animal,
         })
