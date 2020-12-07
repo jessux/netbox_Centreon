@@ -1,12 +1,15 @@
 from setuptools import find_packages, setup
 
+from netbox_nagios.version import VERSION
+
 setup(
-    name='netbox_Centreon',
-    version='0.1',
-    description='An example NetBox plugin',
-    url='https://github.com/netbox-community/netbox-Centreon-sounds',
-    author='Jeremy Stretch',
-    license='Apache 2.0',
+    name="netbox-nagios",
+    version=VERSION,
+    author="Hudson River Trading LLC",
+    author_email="opensource@hudson-trading.com",
+    description="Netbox Plugin to show Nagios device state in Netbox.",
+    url="https://github.com/hudson-trading/netbox_nagios/",
+    license="New BSD",
     install_requires=[],
     packages=find_packages(),
     include_package_data=True,

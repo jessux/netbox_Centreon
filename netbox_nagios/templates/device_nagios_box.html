@@ -1,0 +1,21 @@
+{% load nagios %}
+
+<div class="panel panel-default">
+    <div class="panel-heading"><strong>Nagios</strong>
+        <a href="{{ centreon_base_url }}main.php?p=20202&o=hd&host_name={{ object.name }}" class="btn btn-xs btn-primary"
+            style="float: right;">
+            Open in Centreon
+        </a>
+    </div>
+    <table class="table table-hover panel-body attr-table">
+        <tr>
+            <td><a href='{{ centreon_base_url }}main.php?p=20202&o=hd&host_name={{ object.name }}'>Host Status</a>
+            </td>
+            <td>
+                <span
+                    class="label label-{{ nagios.state|nagios_status_color }}">{{ nagios.state|nagios_status_string }}</span>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</div>
