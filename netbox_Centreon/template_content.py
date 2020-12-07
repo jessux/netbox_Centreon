@@ -1,4 +1,4 @@
-from extras.plugins import PluginTemplateExtension
+from extras import PluginTemplateExtension
 from .models import CentreonObjectStatus
 import requests
 from __init__ import config
@@ -27,6 +27,8 @@ class SiteCentreonObjectStatus(PluginTemplateExtension):
 
         else:
             return ""
+
+    def
 
     def getHostsByName(self,name):
         payload = {'username': 'gabriel','password': '5UtGqvY5'}
