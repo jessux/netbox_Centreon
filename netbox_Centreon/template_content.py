@@ -2,10 +2,10 @@ from extras.plugins import PluginTemplateExtension
 from .models import CentreonObjectStatus
 
 class SiteCentreonCount(PluginTemplateExtension):
-    model = 'dcim.site'
+    model = 'dcim.devices'
 
     def right_page(self):
-        return self.render('netbox_Centreon/status.html', extra_context={
+        return self.render('/opt/netbox_Centreon/templates/netbox_Centreon/status.html', extra_context={
             'CentreonObjectStatus': CentreonObjectStatus.objects.all(),
         })
 
