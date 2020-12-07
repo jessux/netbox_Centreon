@@ -6,8 +6,10 @@
     
     
         <div class="panel-body text-muted">
+            {%for c in CentreonObjectStatus%}
             {%if c.imported%}<span class="label label-success">Imported</span>{%else%}<span class="label label-danger">Not imported</span>{%endif%}<br>
             {%if c.state%}<span class="label label-success">Activated</span>{%else%}<span class="label label-danger">Disabled</span>{%endif%}<br>
+            {%endfor%}
         </div>
     
 </div>

@@ -7,9 +7,8 @@ import requests
 class SiteCentreonObjectStatus(PluginTemplateExtension):
     model = 'dcim.devices'
     def right_page(self):
-        c= {"imported":True,"state":False}
         return self.render('netbox_Centreon/status.html', extra_context={
-            'c': c
+            'CentreonObjectStatus': CentreonObjectStatus
         })
 
 template_extensions = [SiteCentreonObjectStatus]
