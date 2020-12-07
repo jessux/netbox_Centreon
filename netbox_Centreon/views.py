@@ -6,6 +6,6 @@ class RandomCentreonView(View):
 
     def get(self, request):
         Centreon = CentreonObjectStatus.objects.order_by('?').first()
-        return render(request, 'netbox_Centreon/templates/netbox_Centreon/CentreonObjectStatus.html', {
+        return render(request, 'netbox_Centreon/CentreonObjectStatus.html', {
             'CentreonObjects': Centreon,
         })
